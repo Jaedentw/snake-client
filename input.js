@@ -22,6 +22,18 @@ const setupInput = function (conn) {
     if (key === 'a') {
       conn.write('Move: left');
     }
+    if (key === 'h') {
+      conn.write('Say: Hello!');
+    }
+    if (key === 'g') {
+      conn.write('Say: Gotcha!');
+    }
+    if (key === '9') {
+      conn.write('Say: :(');
+    }
+    if (key === '0') {
+      conn.write('Say: :)');
+    }
   }
   stdin.on("data", handleUserInput);
   return stdin;
