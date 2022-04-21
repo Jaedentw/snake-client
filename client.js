@@ -3,7 +3,7 @@ const net = require("net");
 // establishes a connection with the game server
 const connect = function () {
   const conn = net.createConnection({
-    host: '172.24.209.12' ,
+    host: '192.168.242.211' ,
     port: '50541',
   });
 
@@ -12,6 +12,7 @@ const connect = function () {
 
   conn.on("connect", () => {
     console.log("connected");
+    conn.write('Name: JTW')
   });
 
   conn.on("data", (data) => {
